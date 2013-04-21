@@ -1,0 +1,11 @@
+{
+  "name": "simplepixel",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-watch": "latest"
+  }
+}

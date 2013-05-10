@@ -9,23 +9,45 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <link href='http://fonts.googleapis.com/css?family=Dosis|Merriweather+Sans:300' rel='stylesheet' type='text/css'>
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="media/css/app.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
 
+        <header>
+            <ul>
+                <li class="active"><a href="/">experiments</a></li>
+                <li><a href="http://simplepixel.tumblr.com">notes</a></li>
+                <li><a href="/cv.html">cv</a></li>
+            </ul>
+        </header>
 
-        <div id="resume">
-            <h1 data-bind="text: name"></h1>
+        <div class="entry">
+            <h4>Rapid prototyping with deployd, finch.js, and knockout.js</h4>
+            <p>I do a fair amount of prototyping work, often requiring a lot of
+            the same boilerplate. This collection of code is the result of a few recreations of the same boilerplate.</p>
 
+            <p>Deployd has proven to be a very handy utility for socking away some data and not worrying about how it comes in and out.</p>
+
+            <p>KnockoutJS continues to be my favorite utility, its versitality is remarkable. I continue to be able to reduce hundreds of lines of jQuery into a few dozen lines of Knockout models, and consise template code. For this project Knockout provides the bulk of the functionality.</p>
+
+            <p>Finch.js provides routing, simple as that. It's a very nice piece of code, and I'm afraid to say that I haven't explored all of its functionality yet. It was quite easy to get the routing table together however.</p>
+
+            <p>Lastly we have Grunt and Foundation. I'm using grunt to watch and compile all SCSS and JS changes. There's some extra code in there to send out growl notifications and livereload compatability too. Foundation4 is baked in, as it's my preferred frontend framework.</p>
+
+            <p><a href="http://bitbucket.org/simplepixel/locator">http://bitbucket.org/simplepixel/dpd-mvc</a></p>
         </div>
+
+        <div class="entry">
+            <h4>Geolocationing Locator</h4>
+            <p>Lorum ipsum as dfad Lorum ipsum as dfad Lorum ipsum as dfad</p>
+            <p><a href="http://bitbucket.org/simplepixel/locator">http://bitbucket.org/simplepixel/locator</a></p>
+        </div>
+        
 
         <script src="/media/scripts/libs.js"></script>
         <script src="/media/scripts/app.js"></script>
-
         <script>
             // var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             // (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

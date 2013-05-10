@@ -1,6 +1,7 @@
 {
   "name": "simplepixel",
   "version": "0.0.1",
+  "readme": "ReadMe.md",
   "dependencies": {
     "knockout": "~2.2.0",
     "jquery": "~1.9.2",

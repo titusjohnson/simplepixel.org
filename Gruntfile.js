@@ -21,30 +21,51 @@ module.exports = function(grunt) {
     compass: {
       dev: {
         options: {
+          require: ['zurb-foundation'],
           sassDir: 'media/scss/',
-          cssDir: 'media/css'
+          cssDir: 'media/css',
+          imagesDir: "media/images"
         }
       }
     },
-
     watch: {
       compass: {
         files: ['media/scss/*.scss'],
-        tasks: ['compass'],
+        tasks: ['compass','notify:watch'],
         options: {
           nospawn: true
         }
+      }
+    },
+    notify_hooks: {
+      options: {
+        enabled: true
+      }
+    },
+    notify: {
+      watch: {
+        options: {
+          title: "grunt:watch",
+          message: "Compass compiled"
+        }
+      }
+    },
+    connect: {
+      server: {
+        options: 8080,
+        base: './'
       }
     }
   });
 
   // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-notify');
 
   // Default task(s).
-  grunt.registerTask('default', ['watch']);
-
+  grunt.registerTask('default', ['connect:server', 'watch']);
 };

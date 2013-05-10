@@ -168,7 +168,6 @@
         self.description = data.description;
         return self;
     }
-
     function ProfileViewModel(profile) {
         var self = this;
         self.name = profile.name;
